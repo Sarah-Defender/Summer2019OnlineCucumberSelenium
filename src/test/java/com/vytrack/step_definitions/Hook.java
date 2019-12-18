@@ -1,5 +1,6 @@
 package com.vytrack.step_definitions;
 
+import com.vytrack.utilities.Driver;
 import cucumber.runtime.Utils;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
@@ -25,7 +26,8 @@ public class Hook {
             System.out.println("Test completed!");
         }
         System.out.println("##############################");
-
+       //after every test we're gonna close the browser
+        Driver.close();
     }
 
 
